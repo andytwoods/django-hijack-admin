@@ -4,7 +4,6 @@ from django import VERSION
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.template.loader import get_template
-from django.utils.translation import ugettext_lazy as _
 
 from hijack import settings as hijack_settings
 
@@ -36,7 +35,7 @@ class HijackUserAdminMixin(object):
 
         return button_template.render(button_context)
 
-    hijack_field.short_description = _('Hijack user')
+    hijack_field.short_description = 'Hijack user'
 
 
 class HijackRelatedAdminMixin(HijackUserAdminMixin):
